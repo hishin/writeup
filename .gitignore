@@ -4,3 +4,5 @@
 *.log
 *.gz
 *examples*
+proceedings.tex
+extended-abstract.tex
