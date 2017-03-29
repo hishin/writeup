@@ -1,15 +1,24 @@
 \section{User Evaluation}
 
-We evaluate \interface\ from two perspectives: from the presentation
-author's point of view and from the audience's point of view. 
+We evaluate \interface\ from two perspectives: from the presenter's point of view and from the audience's point of view. 
 
 \wil{If we have time, it could be useful to include even an informal
   evaluation of the space manipulation features. Maybe just give users
   a script that includes explicit ``improvisations'' beyond the
   prepared content and ask for qualitative feedback?}
 
-\subsection{Authoring}
+\subsection{Presenter's Perspective}
+\val{Explain that we specifically focus on the delivery stage (vs. authoring).}
+To better understand the benefits of our interface, we evaluated \interface against two baselines. The first baseline (\textit{BaselinePPT}) represents conventional electronic slides. We use Microsoft PowerPoint, and allow users to apply animation effects, but disallow inking during presentation. The second baseline (\textit{BaselineInk}) represents plain inking condition. We also use Microsoft PowerPoint, but this time we allow users to only use inking without any animations. 
 
-Users create presentations using three different tools, PPT with slide animations, PPT with only inking, and our tool. We test on three different types of slides. 
+We hypothesized that different types of content will lend themselves to different presentation styles. We compare three different types of content: (1) a text-centered content, explaining the derivation of the quadratic formula, (2) a diagram-centered content, describing the hydrologic cycle, and (3) a typical PPT style content with bullet points and images, listing different carpentry tools. Using PowerPoint, we pre-authored a single page slide for each of these content types, and separated the elements on each slide into foreground and background elements.  
+\val{Figure of three slides, including explanation of background foreground}
 
-\subsection{Rating}
+\textbf{Task and Protocol}\\
+For each trial, participants were given a slide and asked asked to deliver a presentation with it on one of the interfaces. They received verbal and written explanations of the slide content, and had time to familiarize themselves. They were also given time to prepare the slide before the presentation. In the BaselinePPT condition, participants could set animation effects on the foreground elements. For the BaselineInk condition, the slide only contained background elements \val{Figure} and participants received a separate printed copy of the slide containing both background and foreground elements. (The printout was available for all conditions.) Participants could prepare by inking contents beforehand. This is analogous to a blackboard lecturer writing on the board the before class. For \interface, participants could prepare by either revealing foreground elements or inking on top of the slides ahead of time. 
+
+To simulate a real presentation with an audience, participants were asked to pretend that their presentation was being broadcast live as a webcast. We screen recorded each presentation. At the end of each trial, we showed the recording to the presenter, and asked them to self-rate their own presentation, this time pretending that they were students trying to learn the subject. Presenters also completed a questionnaire about each interface.
+
+We used a within-subject design, where each participant delivered presentations on each interface. We counter-balanced the order of the interfaces and the assignment of the content to interfaces. There were 12 participants in total (ages 21 to 31), all of whom were familiar with the PowerPoint interface. 
+
+\subsection{Audience's Perspective}
