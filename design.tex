@@ -1,25 +1,21 @@
 \section{Design Principles}
-To learn about current practices and unsupported needs in presentation technology, we conducted multiple rounds of interviews with classroom lecturers, online lecturers, graduate student TAs, and undergraduate students, with varied experiences in giving and listening to presentations. 
-
-The interviews led us to the following key insights which informed the design of our interface.
+To learn about current practices and unsupported needs in presentation technology, we conducted multiple rounds of interviews with classroom lecturers, online lecturers, graduate student TAs, and undergraduate students, with varied experiences in giving and listening to presentations. \val{Also consulted literature comparing ppt and blackboard.} Here we focus on the key insights which affected the design of our interface. 
 
 \textbf{Flexibility in presentations is preferred for interactive or informal settings.} For settings such as research conferences or business meetings, where there is a tight time constraint and little room for presenter-audience interaction, people preferred scripted presentations with electronic slides. However, for settings such as lectures, tutoring sessions, or brainstorming meetings, people preferred to have some flexibility and often used inking as part of their presentations. Common strategies included using a blackboard or projecting a slide or transparency on the board and inking on top of them. Several lecturers purposefully left out blank spaces on their slides to fill in by inking during the lecture. Inking helped presenters to draw the audience's attention by  writing in real-time or making annotations, and to adjust the content or order of the presentation. 
 
-\textbf{Presenters want flexibility over prepared contents rather than complete improvisation.} Even for informal settings, presenters had the bulk of the content planned and prepared beforehand, for example, in the form of lecture notes, worksheets or slides. The type of flexibility that presenters wanted was the ability to make small-scale adjustments on-the-fly, for instance, omitting a part of the content, adding minor changes such as a line of text or annotations, or changing the order of the contents. Depending on the subject matter, inking in real time also allowed presenters to have fine-grained control over the pace of the presentation, making it easier to follow for the audience. For example, for describing sequential processes like solving a math problem or explaining a complex diagram, both the presenters and the audience found it more effective to write them out step-by-step in real-time. Sometimes presenters used slide animations to simulate this effect, but this required a lot of tedious effort to set up the animations, and usually ended up in a less fine-grained.
+\textbf{Presenters want flexibility over prepared contents rather than complete improvisation.} Even for informal settings, presenters had the bulk of the content planned and prepared beforehand, for example, in the form of lecture notes, worksheets or slides. The type of flexibility that presenters wanted was the ability to make small-scale adjustments on-the-fly, for instance, omitting a part of the content, adding minor changes such as a line of text or annotations, or changing the order of the contents. Depending on the subject matter, inking in real time also allowed presenters to have fine-grained control over the pace of the presentation, making it easier to follow for the audience. For example, for describing sequential processes like solving a math problem or explaining a complex diagram, both the presenters and the audience found it more effective to write them out step-by-step in real-time. Sometimes presenters used slide animations to simulate this effect, but setting up fine-grained animations is tedious so presenters usually ended up with a coarse set of discrete steps. 
 
-\textbf{Presenters and audience care about beauty.} People complain about messy handwriting. Presenters are not satisifed, and audience cannot read them afterwards. It's difficult to do it well while talking at the same time. It takes too much time to draw. In case of online lecture, record voice and visual separately, and edit visual many times. Prepare diagrams beforehand. Difficulty of choosing pen color etc.
+\textbf{Visual aesthetics matter, but is difficult to achieve with inking.} People frequently mentioned better visual aesthetics as an advantage of slides over inking. As presenters, people were often not satisfied or even embarrassed of their own handwriting. They pointed out that it was even more difficult to write as they were talking at the same time. Even small operations, such as changing the pen color, seemed burdensome during the lecture\cite{anderson2004study}. Whereas slides can display too much information too fast, inking suffers from the opposite problem. Writing takes a lot of time, which may explain why presenters prefer electronic slides for time-constrained settings. As audience, people liked the legibility and organization that pre-authored slides afforded. Sometimes audiences even felt that lecturers were better prepared when they delivered using electronic slides \cite{frey2002learners}.
 
-From these we extract key design goals: 
+\section{Design Goals}
+Based on these key insights, our design goal is to join the advantages of slides (aesthetics, organization) with that of inking (flexibility, fine-grained control), without increasing the burden of the presenter. 
 
-1. Minimize cognitive load of the presenter. Should be modeless.
-In previous study of inking during presentation [cite], presenters use
-features (e.g., color, highlighting) parsimoniously.
+\val{Take advantage of pre-authored content for aesthetics and organization.}
 
-2. Increase flexibility. fine-grained reveal. Also reduces prep time.
+\textbf{Maximize flexibility and fine-grained control during presentation delivery.} Presenters should have fine control over what visual content to present, and also when, how much, and how fast to present them. Moreover, these decisions need not be made ahead of time; instead, presenters should be able to implement and adjust them while delivering.
 
-3. Retain direct control. Instead of automatic beautification / layout management. 
+\textbf{Minimize presenter effort during delivery as well as during preparation.} We want to give presenters more control, but without increasing their burden. Interactions during delivery should be as simple and natural as possible. While taking full advantage of prepared materials to alleviate the challenges of visual aesthetics and organization, preparation itself should not take more effort than, for example, authoring regular slide presentations. 
 
-\wil{Before getting into the details of the method, I think we should
-  describe the key aspects of our design (fine-grained reveal and
-  space manipulation, right?) and connect them to our design principles.}
+These design goals are expressed in \interface in the following ways. 
+
 
