@@ -5,6 +5,8 @@
 *.gz
 *examples*
 *.blg
+*.bbl
 .DS_Store
+Makefile
 proceedings.tex
 extended-abstract.tex
