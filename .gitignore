@@ -4,5 +4,7 @@
 *.log
 *.gz
 *examples*
+*.blg
+.DS_Store
 proceedings.tex
 extended-abstract.tex
