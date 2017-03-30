@@ -1,5 +1,43 @@
 \subsection{Discussion of Study Results}
-Overall, participants reported positive feedback about \interface. Presenters found it easy to present with our interface, despite the fact that it was their first time using it. They were also satisfied with the presentation results delivered using \interface. As for the preference of interfaces, both the presenters' and the audiences' choice depended on the type of content. \interface was preferred for text-centered or process-driven content. 
+Overall, presenters found \interface easy to use for setting up and delivering presentations. They were satisfied with the quality of the presentations recorded using our interface, and emphasized that the appearance of real time inking had an engaging effect. The preference of presentation tool depended on the content type. Both the presenters and the audiences preferred \interface for text-centered or process-driven content. Below we discuss each of these aspects in more detail. 
+
+\definecolor{color1}{rgb}{0.90, 0.83, 0.76}
+\definecolor{color2}{rgb}{0.91, 0.66, 0.66}
+\definecolor{color3}{rgb}{0.68, 0.68, 0.96}
+\begin{tikzpicture}
+\begin{axis}[
+    ybar,
+    enlargelimits=0.15,
+    enlarge y limits={upper=0},
+    legend style={at={(0.5,-0.15)},
+      anchor=north,legend columns=-1},
+    symbolic x coords={Easy Setup, Easy Delivery, Satisfaction},
+    xtick=data,
+%    nodes near coords,
+%    nodes near coords align={vertical},
+    scaled y ticks = false,
+    ymin =0,
+    ylabel={Score},
+    ]
+\addplot[style={fill=color1}, error bars/.cd, y dir=both, y explicit]
+coordinates {
+(Easy Setup, 3.6) += (0,1.0) -= (0,1.0)
+(Easy Delivery, 4.2) += (0,0.7) -= (0,0.7)
+(Satisfaction, 3.3)+= (0,0.8) -= (0,0.8)};
+\addplot[style={fill=color2}, error bars/.cd, y dir=both, y explicit] 
+coordinates {(Easy Setup, 3.9) += (0,0.2) -= (0,0.1)
+(Easy Delivery, 3.3) += (0,0.2) -= (0,0.1)
+(Satisfaction, 2.8)+= (0,0.2) -= (0,0.1)};
+\addplot[style={fill=color3}, error bars/.cd, y dir=both, y explicit] 
+coordinates {(Easy Setup, 4.6) += (0,0.2) -= (0,0.1)
+(Easy Delivery, 3.8) += (0,0.2) -= (0,0.1)
+(Satisfaction, 3.7)+= (0,0.2) -= (0,0.1)};
+\legend{BaselinePPT, BaselineInk, \interface (Ours)}
+\end{axis}
+\end{tikzpicture}
+
+\textbf{}\\
+Presenters found it easiest to set up the slides using our interface \val{(Figure)}.  
 
 1. Easier to prepare using \interface.
 2. As easy to present
