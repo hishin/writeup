@@ -8,12 +8,17 @@
 
 Based on these design goals, we developed \interface, a presentation system that combines electronic slides with inking interactions. 
 
-\interface\ allows presenters to pre-author slides in order to organize and refine the visual aesthetics of their material.
+With \interface, presenters pre-author slides to organize and refine the visual aesthetics of their material.
 %
 Unlike traditional electronic slides, presenters do not specify beforehand when, how, or in which order the visual elements in the slide will appear via scripted animation effects. Instead, they simply specify which elements will be displayed to the audience immediately versus which elements will be revealed in real time. 
 
-The key innovation of \interface\ is in how presenters deliver the pre-authored content.
-The main mode of interaction at presentation time is inking, but instead of just adding strokes to the slide, inking supports three functions depending on the context: it can (1) reveal pre-authored slide elements to the audience, (2) add ink strokes on top of the slide, or (3) adjust the slide layout by creating blank space. Inking allows presenters to have flexibility and fine-grained control over when, how much, and how fast to reveal elements on the slide. Presenters can also add extra writing or annotations on top of pre-authored elements, and create blank space if necessary. All of these interactions are implemented as modeless pen interactions. 
+The key innovation of \interface\ is in how presenters deliver the pre-authored content.  The main mode of interaction at presentation time is inking, but instead of just adding strokes to the slide, inking supports three functions depending on the context: it can (1) reveal pre-authored slide elements to the audience, (2) add ink strokes on top of the slide, or (3) adjust the slide layout by creating blank space. Inking allows presenters to have flexibility and fine-grained control over when, how much, and how fast to reveal elements on the slide.
+%
+Moreover, when revealing pre-authored content, presenters do not have to worry about writing or drawing neatly.
+%
+Presenters can also add extra writing or annotations on top of pre-authored elements, and create blank space if necessary. 
+%
+All of these interactions are implemented as modeless pen interactions.
 
 Here we elaborate on slide authoring and inking in our system.
 \begin{figure*}
@@ -30,16 +35,25 @@ Slides in \interface\ can be authored using any existing slide presentation soft
 \interface\ enables robust, modeless inking operations at presentation time by leveraging the structure of the pre-authored slide content. Each of the three inking functions uses this structure in different ways. 
 
 \subsubsection{Reveal}
-To reveal a portion of the foreground layer to the audience, the presenter inks over the content. At the end of each stroke, the system computes a subset of nearby foreground pixels to display. Our technique provides different levels of precision. To reveal a small piece of content, the presenter can ink slowly over the relevant foreground region. This interaction is useful when the presenter wants to simulate writing in real-time, or needs to reveal a specific element in a dense slide (e.g., just the numerator in a fraction). \wil{Add figure or reference video?}
+To reveal content to the audience, the presenter inks over the relevant portion of the foreground layer.
+%
+At the end of each stroke, the system computes a subset of the surrounding foreground pixels to display. 
+%
+For each point, $s_i$ on the stroke, the closest foreground pixel, $p_i$ is computed. If the distance between $p_i$ and $s_i$ is within a threshold $\alpha$, a flood-fill is performed starting from $p_i$ to neighboring foreground pixels. The value of $\alpha$ determines how precisely the user has to ink in order to reveal the underlying content. \wil{Maybe say something about how we set $\alpha$?}
+%
+The extent of the flood-fill is limited by two additional thresholds $\beta$ and $\gamma$ on (1) the distance from $p_i$, and (2) the color difference (\wil{What color space?}) from $p_i$. 
+%
+To give presenters finer-grained control over the extent of the reveal, $\beta$ and $\gamma$ vary according to the velocity of the presenter's ink stroke. \wil{We should probably add the formula.} 
+
+Our algorithm has several important properties. Bounding the flood-fill with $\beta$ and $\gamma$ ensures that the revealed content is localized around the user stroke and prevents ``bleeding'' across regions with very different colors. For example (\wil{add example}). 
+%
+In addition, modulating $\beta$ and $\gamma$ based on the stroke velocity allows presenters to reveal with different levels of precision. 
+%
+To show a small piece of content, the presenter can ink slowly over the relevant foreground region. This interaction is useful when the presenter wants to simulate writing in real-time, or needs to reveal a specific element in a dense slide (e.g., just the numerator in a fraction). \wil{Add figure or reference video?}
 %
 In other situations, users may want to reveal larger pieces of content more efficiently. For example, in \wil{Figure X}, the presenter reveals all of \wil{X} at once to save time before focusing on \wil{Y}. In this case, users can ink quickly and roughly (e.g., by scribbling) over a foreground region.
 \wil{Here, we can maybe use the map example with arrows and say that if the presenter is running short on time, they can quickly scribble to reveal all the north america arrows and then spend more time focusing on individual arrows in other parts of the world.}
 
-To support this range of interactions, we interpret inked strokes in the following way.
-%
-For each point, $s_i$ on the stroke, the closest foreground pixel, $p_i$ is computed. If the distance between $p_i$ and $s_i$ is within a threshold $\alpha$, a flood-fill is performed starting from $p_i$ to neighboring foreground pixels. The value of $\alpha$ determines how precisely the user has to ink in order to reveal the underlying content. \wil{Maybe say something about how we set $\alpha$?}
-%
-The extent of the flood-fill is limited by two additional thresholds $\beta$ and $\gamma$ on (1) the distance from $p_i$, and (2) the color difference from $p_i$. In order to give presenters finer-grained control over the extent of the reveal, $\beta$ and $\gamma$ vary according to the velocity of the presenter's ink stroke. \wil{We should probably add the formula.} 
 
 \if 0
 If the presenter inks slowly, only a small neighborhood close to the original stroke is revealed. This is useful when the presenter wants to simulate writing in real-time, and reveal, for example, a part of a character or a diagram.
