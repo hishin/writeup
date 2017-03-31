@@ -16,10 +16,14 @@ The key innovation of \interface\ is in how presenters deliver the pre-authored 
 The main mode of interaction at presentation time is inking, but instead of just adding strokes to the slide, inking supports three functions depending on the context: it can (1) reveal pre-authored slide elements to the audience, (2) add ink strokes on top of the slide, or (3) adjust the slide layout by creating blank space. Inking allows presenters to have flexibility and fine-grained control over when, how much, and how fast to reveal elements on the slide. Presenters can also add extra writing or annotations on top of pre-authored elements, and create blank space if necessary. All of these interactions are implemented as modeless pen interactions. 
 
 Here we elaborate on slide authoring and inking in our system.
+\begin{figure*}
+  \centering
+  \includegraphics[width=2.0\columnwidth]{figures/watercycle}
+  \caption{}~\label{fig:watercycle}
+\end{figure*}
 
 \subsection{Slide authoring}
-\val{Figure showing example of background / foreground / notes}
-Slides in \interface\ can be authored using any existing slide presentation software (e.g., PowerPoint, Keynote, GoogleSlides). They can include typed text or images, as well as, hand drawn ink strokes. Instead of specifying animation effects on these slide elements, presenters separate them into two layers for each slide. The background layer is always visible and it is what the audience sees initially. The foreground layer is initially only visible on the presenter view, but presenters can reveal parts of it to the audience during delivery. \val{Presenters also have the option of preparing a third layer, the notes layer, which is only visible on the presenter view and acts as transparent speaker notes placed on top of the slides.} Layers in \interface\ are represented as bitmap images. 
+Slides in \interface\ can be authored using any existing slide presentation software (e.g., PowerPoint, Keynote, GoogleSlides). They can include typed text or images, as well as, hand drawn ink strokes. Instead of specifying animation effects on these slide elements, presenters separate them into two layers for each slide. The background layer is always visible and it is what the audience sees initially. The foreground layer is initially only visible on the presenter view, but presenters can reveal parts of it to the audience during delivery. Presenters also have the option of preparing a third layer, the notes layer, which is only visible on the presenter view and acts as transparent speaker notes placed on top of the slides. Layers in \interface\ are represented as bitmap images. (Figure~\ref{fig:watercycle})
 
 \subsection{Inking during delivery}
 %
