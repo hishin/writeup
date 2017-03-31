@@ -1,9 +1,11 @@
 \subsection{Discussion of Study Results}
 Overall, presenters found \interface easy to use for setting up and delivering presentations. They were satisfied with the quality of the presentations recorded using our interface, and emphasized that the appearance of real time inking had an engaging effect. The preference of presentation tool depended on the content type. Both the presenters and the audiences preferred \interface for text-centered or process-driven content. Below we discuss each of these aspects in more detail. 
 
-\definecolor{color1}{rgb}{0.90, 0.83, 0.76}
+\definecolor{color1}{rgb}{0.92, 0.83, 0.78}
 \definecolor{color2}{rgb}{0.91, 0.66, 0.66}
 \definecolor{color3}{rgb}{0.68, 0.68, 0.96}
+\begin{figure}
+\centering
 \begin{tikzpicture}
 \begin{axis}[
     ybar,
@@ -35,11 +37,17 @@ coordinates {(Easy Setup, 4.6) += (0,0.2) -= (0,0.1)
 \legend{BaselinePPT, BaselineInk, \interface (Ours)}
 \end{axis}
 \end{tikzpicture}
+\caption{Chart 1}
+\label{eval_chart1}
+\end{figure}
 
-\textbf{}\\
-Presenters found it easiest to set up the slides using our interface \val{(Figure)}.  
+\textbf{\interface\ makes it easier to prepare slides.}\\
+\val{I feel like we should be more precise about the word preparation. Preparation can include studying the material, authoring the slide (plus setting up the slide--with animation effects etc), and rehearsing the slides. Here, I am trying to focus on the "set up part."}\\
+Presenters found it easiest to set up the slides using our interface (Figure~\ref{eval_chart1}). In most cases, they did not do any extra work (revealing or writing beforehand) to set up the slides, but used them as is. In the few cases, where they pre-revealed parts of the foreground, they expressed that the required effort was minimal. \\
+In comparison, although our participants were familiar users of PowerPoint, they found the effort to setup animation effects tedious. To quote \textit{U6}, "\textit{It was cumbersome to add animations to each individual object and get the timing right... sometimes I decided I wanted to add an animation, but then had to figure out where to insert it in the existing animations sequence.}"\\
+In the BaselineInk condition, similar to in \interface, most participants used the slide as is, without writing contents ahead of time. However, the reasons were different. In \interface, presenters could rely on the pre-authored foreground to effortlessly reproduce those contents (by revealing) to the audience in real time during delivery. In the BaselineInk condition, presenters had to manually draw the foreground contents. They could do this ahead of time, which would mean losing the real time effect, or they could do it during delivery. Either way, the effort was more "\textit{daunting (U12)}" and  "\textit{time consuming (U8)}", and the result was aesthetically less satisfactory (\textit{U1, U5, U8}).  
 
-1. Easier to prepare using \interface.
+\textbf{}
 2. As easy to present
 3. Presenters were satisfied with the result. Audience satisfaction depended on subject. 
 4. Content-tool affects each other.
