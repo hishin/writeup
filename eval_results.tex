@@ -3,45 +3,45 @@
 
 Overall, presenters found \interface\ easy to use for setting up and delivering presentations. They were satisfied with the quality of the presentations recorded using our interface, and emphasized that the appearance of real time inking had an engaging effect. The preference of presentation tool depended on the content type. Both the presenters and the audiences preferred \interface\ for text-centered or process-driven content. Below we discuss each of these aspects in more detail. 
 
-\definecolor{color1}{rgb}{0.92, 0.83, 0.78}
-\definecolor{color2}{rgb}{0.91, 0.66, 0.66}
-\definecolor{color3}{rgb}{0.68, 0.68, 0.96}
-\begin{figure}
-\centering
-\begin{tikzpicture}
-\begin{axis}[
-ybar,
-enlargelimits=0.15,
-enlarge y limits={upper=0},
-legend style={at={(0.5,-0.15)},
-  anchor=north,legend columns=-1},
-symbolic x coords={Easy Setup, Easy Delivery, Satisfaction},
-xtick=data,
-%    nodes near coords,
-%    nodes near coords align={vertical},
-scaled y ticks = false,
-ymin =0,
-ylabel={Score},
-]
-\addplot[style={fill=color1}, error bars/.cd, y dir=both, y explicit]
-coordinates {
-(Easy Setup, 3.6) += (0,1.0) -= (0,1.0)
-(Easy Delivery, 4.2) += (0,0.7) -= (0,0.7)
-(Satisfaction, 3.3)+= (0,0.8) -= (0,0.8)};
-\addplot[style={fill=color2}, error bars/.cd, y dir=both, y explicit] 
-coordinates {(Easy Setup, 3.9) += (0,0.2) -= (0,0.1)
-(Easy Delivery, 3.3) += (0,0.2) -= (0,0.1)
-(Satisfaction, 2.8)+= (0,0.2) -= (0,0.1)};
-\addplot[style={fill=color3}, error bars/.cd, y dir=both, y explicit] 
-coordinates {(Easy Setup, 4.6) += (0,0.2) -= (0,0.1)
-(Easy Delivery, 3.8) += (0,0.2) -= (0,0.1)
-(Satisfaction, 3.7)+= (0,0.2) -= (0,0.1)};
-\legend{BaselinePPT, BaselineInk, \interface (Ours)}
-\end{axis}
-\end{tikzpicture}
-\caption{Chart 1}
-\label{eval_chart1}
-\end{figure}
+%\definecolor{color1}{rgb}{0.92, 0.83, 0.78}
+%\definecolor{color2}{rgb}{0.91, 0.66, 0.66}
+%\definecolor{color3}{rgb}{0.68, 0.68, 0.96}
+%\begin{figure}
+%\centering
+%\begin{tikzpicture}
+%\begin{axis}[
+%ybar,
+%enlargelimits=0.15,
+%enlarge y limits={upper=0},
+%legend style={at={(0.5,-0.15)},
+%  anchor=north,legend columns=-1},
+%symbolic x coords={Easy Setup, Easy Delivery, Satisfaction},
+%xtick=data,
+%%    nodes near coords,
+%%    nodes near coords align={vertical},
+%scaled y ticks = false,
+%ymin =0,
+%ylabel={Score},
+%]
+%\addplot[style={fill=color1}, error bars/.cd, y dir=both, y explicit]
+%coordinates {
+%(Easy Setup, 3.6) += (0,1.0) -= (0,1.0)
+%(Easy Delivery, 4.2) += (0,0.7) -= (0,0.7)
+%(Satisfaction, 3.3)+= (0,0.8) -= (0,0.8)};
+%\addplot[style={fill=color2}, error bars/.cd, y dir=both, y explicit] 
+%coordinates {(Easy Setup, 3.9) += (0,0.2) -= (0,0.1)
+%(Easy Delivery, 3.3) += (0,0.2) -= (0,0.1)
+%(Satisfaction, 2.8)+= (0,0.2) -= (0,0.1)};
+%\addplot[style={fill=color3}, error bars/.cd, y dir=both, y explicit] 
+%coordinates {(Easy Setup, 4.6) += (0,0.2) -= (0,0.1)
+%(Easy Delivery, 3.8) += (0,0.2) -= (0,0.1)
+%(Satisfaction, 3.7)+= (0,0.2) -= (0,0.1)};
+%\legend{BaselinePPT, BaselineInk, \interface (Ours)}
+%\end{axis}
+%\end{tikzpicture}
+%\caption{Chart 1}
+%\label{eval_chart1}
+%\end{figure}
 %
 \textbf{\interface\ makes it easier to prepare slides.}\\
 \val{I feel like we should be more precise about the word preparation. Preparation can include studying the material, authoring the slide (plus setting up the slide--with animation effects etc), and rehearsing the slides. Here, I am trying to focus on the "set up part."}\\
