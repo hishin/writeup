@@ -10,3 +10,5 @@
 Makefile
 proceedings.tex
 extended-abstract.tex
+*.pptx
+*.keys
