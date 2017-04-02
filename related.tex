@@ -1,25 +1,23 @@
 \section{Related Work}
-\subsection{1. Slide presentation tools}
-focused on increasing flexibility
-Zongker03--Slithy: Scripted animation\\
-Homan06--Zoomable Interface\\
-Moscovich04--Presentation Path\\
-Classroom presenter\\
-Cao05, Nelson99 - Controlling Slide Presentation
+\subsection{Slide Presentation Tools}
+PowerPoint \cite{powerpoint2017}, Keynote \cite{keynote2017} and Google Slides \cite{googleslides2017} are among the most popular presentation software in use. These systems make authoring slides very easy through a WYSIWYG graphical interface. Powerpoint and Keynote also offer a variety of animation effects that can be applied to slide elements. However, compared to the flexibility during authoring, interaction during delivery is minimal, restricting the slideshow to a predetermined linear path. \\
+To address this shortcoming, several research systems looked at supporting nonlinear paths though a presentation. Fly \cite{lichtschlag2009fly} and CounterPoint \cite{good2002zoomable} are zooming user interfaces (ZUIs) that allow spatial navigation by embedding slides on an infinite canvas. Prezi \cite{prezi2017} is a commercial, online platform for authoring zoomable presentations. Moscovich et al \cite{moscovich2004customizable} organizes slides into nested directed graphs and allows presenters to choose between multiple paths on the fly. Similarly, Drucker et al. \cite{drucker2006comparing} suggests a method to compare and manage multiple slide presentations. \val{We look at interaction within a single slide.}\\
+Another line of work explored alternative techniques to control slide presentations. Palette \cite{nelson1999palette} uses physical paper cards to provide random access to slides.  Baudel and Beaudouin-Lafon \cite{baudel1993charade} use hand gestures, and Cheng and Pulo \cite{cheng2003direct} use infrared laser pointer to control presentations. Cao et al. \cite{cao2005evaluation}
+performed a systematic user study comparing different interaction techniques, including hand gestures, laser pointer and standard mouse/keyboard input. \val{We propose pen interaction.}\\
+Anderson et al \cite{anderson2007classroom} developed Classroom Presenter, a distributed presentation system, which allowed instructors and students to share digital ink on top of
+electronic slides. \val{Ours: inking interacts with slide}
 
-\subsection{2. Supporting Electronic Inking}
+\subsection{Supporting Electronic Inking}
 
-\textbf{2.1 Beautification}
+\textbf{Drawing Beautification}
+
 Igarishi97--PEGASUS: considers geometric constraints (e.g., parallel, horizontal, coincidence) to support rapid geometric designs.\\
 Fiser15--ShipShape: generalizes geometric constraints to general Bezier curves\\
 Hse05: recognize hand-drawn multi-stroke symbols and convert them to pre-existing shapes in PowerPoint.\\
 Xie14--PortraitSketch: beautify portraits based on underlying image.\\
 Su-EzSketch: refine line drawing based on underlying image.\\
  
-\textbf{2.2 Digital Notetaking}
+\textbf{Computational Processing}
 MathPad, ChemPad, FlatLand: Intelligent processing relying on domain specific knowledge\\
 Text-tearing, Rich Review: inking as an added modality.
-
-\textbf{2.3. Electronic boards for collaboration}
-Tivoli93
 
