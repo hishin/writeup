@@ -1,54 +1,3 @@
-\section{Aparecium}
-\begin{figure*}[ht!]
-    \centering
-    \begin{subfigure}[t]{0.32\textwidth}
-        \centering
-        \includegraphics[width=1\columnwidth]{figures/videoslide1}
-        \caption{Lorem ipsum}
-    \end{subfigure}%
-    ~ 
-    \begin{subfigure}[t]{0.32\textwidth}
-        \centering
-        \includegraphics[width=1\columnwidth]{figures/videoslide2}
-        \caption{Lorem ipsum}
-    \end{subfigure}
-    ~
-        \begin{subfigure}[t]{0.32\textwidth}
-        \centering
-        \includegraphics[width=1\columnwidth]{figures/videoslide3}
-        \caption{Lorem ipsum}
-    \end{subfigure}
-    \caption{Slide Layers}
-\end{figure*}
-
-Based on these design goals, we developed \interface, a presentation system that combines electronic slides with inking interactions. 
-
-With \interface, presenters pre-author slides to organize and refine the visual aesthetics of their material.
-%
-Unlike traditional electronic slides, presenters do not specify beforehand when, how, or in which order the visual elements in the slide will appear via scripted animation effects. Instead, they simply specify which elements will be displayed to the audience immediately versus which elements will be revealed in real time. 
-
-The key innovation of \interface\ is in how presenters deliver the pre-authored content.  The main mode of interaction at presentation time is inking, but instead of just adding strokes to the slide, inking supports three functions depending on the context: it can (1) reveal pre-authored slide elements to the audience, (2) add ink strokes on top of the slide, or (3) adjust the slide layout by creating blank space. Inking allows presenters to have flexibility and fine-grained control over when, how much, and how fast to reveal elements on the slide.
-%
-At the same time, the ability to reveal pre-authored content allows presenters to not worry about writing or drawing neatly.
-%
-Presenters can also add extra writing or annotations on top of pre-authored elements, and create blank space if necessary. 
-%
-All of these interactions are implemented as modeless pen interactions.
-
-Here we elaborate on slide authoring and inking in our system.
-%\begin{figure*}
-%  \centering
-%  \includegraphics[width=2.0\columnwidth]{figures/watercycle}
-%  \caption{}~\label{fig:watercycle}
-%\end{figure*}
-
-
-
-\subsection{Slide authoring}
-Slides in \interface\ can be authored using any existing slide presentation software (e.g., PowerPoint, Keynote, GoogleSlides). They can include typed text or images, as well as, hand drawn ink strokes. Instead of specifying animation effects on these slide elements, presenters separate them into two layers for each slide. The background layer is always visible and it is what the audience sees initially. The foreground layer is initially only visible on the presenter view, but presenters can reveal parts of it to the audience during delivery. Presenters also have the option of preparing a third layer, the notes layer, which is only visible on the presenter view and acts as transparent speaker notes placed on top of the slides. Layers in \interface\ are represented as bitmap images. (Figure~\ref{fig:watercycle})
-
-\subsection{Inking during delivery}
-%
 \begin{figure}[t!]
     \centering
     \begin{subfigure}[t]{0.5\columnwidth}
@@ -94,6 +43,29 @@ Slides in \interface\ can be authored using any existing slide presentation soft
     \caption{Inking to annotate}
 \end{figure}
 
+\section{Aparecium}
+
+Based on these design goals, we developed \interface, a presentation system that combines electronic slides with inking interactions. 
+
+With \interface, presenters pre-author slides to organize and refine the visual aesthetics of their material.
+%
+Unlike traditional electronic slides, presenters do not specify beforehand when, how, or in which order the visual elements in the slide will appear via scripted animation effects. Instead, they simply specify which elements will be displayed to the audience immediately versus which elements will be revealed in real time. 
+
+The key innovation of \interface\ is in how presenters deliver the pre-authored content.  The main mode of interaction at presentation time is inking, but instead of just adding strokes to the slide, inking supports three functions depending on the context: it can (1) reveal pre-authored slide elements to the audience, (2) add ink strokes on top of the slide, or (3) adjust the slide layout by creating blank space. Inking allows presenters to have flexibility and fine-grained control over when, how much, and how fast to reveal elements on the slide.
+%
+At the same time, the ability to reveal pre-authored content allows presenters to not worry about writing or drawing neatly.
+%
+Presenters can also add extra writing or annotations on top of pre-authored elements, and create blank space if necessary. 
+%
+All of these interactions are implemented as modeless pen interactions.
+
+Here we elaborate on slide authoring and inking in our system.
+%\begin{figure*}
+%  \centering
+%  \includegraphics[width=2.0\columnwidth]{figures/watercycle}
+%  \caption{}~\label{fig:watercycle}
+%\end{figure*}
+
 \begin{figure}[t!]
     \centering
     \begin{subfigure}[t]{0.48\columnwidth}
@@ -116,6 +88,35 @@ Slides in \interface\ can be authored using any existing slide presentation soft
     \caption{Creating space}
 \end{figure}
 
+
+
+\subsection{Slide authoring}
+Slides in \interface\ can be authored using any existing slide presentation software (e.g., PowerPoint, Keynote, GoogleSlides). They can include typed text or images, as well as, hand drawn ink strokes. Instead of specifying animation effects on these slide elements, presenters separate them into two layers for each slide. The background layer is always visible and it is what the audience sees initially. The foreground layer is initially only visible on the presenter view, but presenters can reveal parts of it to the audience during delivery. Presenters also have the option of preparing a third layer, the notes layer, which is only visible on the presenter view and acts as transparent speaker notes placed on top of the slides. Layers in \interface\ are represented as bitmap images. (Figure~\ref{fig:watercycle})
+
+\begin{figure*}[ht!]
+    \centering
+    \begin{subfigure}[t]{0.32\textwidth}
+        \centering
+        \includegraphics[width=1\columnwidth]{figures/videoslide1}
+        \caption{Lorem ipsum}
+    \end{subfigure}%
+    ~ 
+    \begin{subfigure}[t]{0.32\textwidth}
+        \centering
+        \includegraphics[width=1\columnwidth]{figures/videoslide2}
+        \caption{Lorem ipsum}
+    \end{subfigure}
+    ~
+        \begin{subfigure}[t]{0.32\textwidth}
+        \centering
+        \includegraphics[width=1\columnwidth]{figures/videoslide3}
+        \caption{Lorem ipsum}
+    \end{subfigure}
+    \caption{Slide Layers}
+\end{figure*}
+
+\subsection{Inking during delivery}
+%
 
 \interface\ enables robust, modeless inking operations at presentation time by leveraging the structure of the pre-authored slide content. Each of the three inking functions uses this structure in different ways. 
 
