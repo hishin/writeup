@@ -4,31 +4,32 @@
     \begin{subfigure}[t]{1\columnwidth}
         \centering
         \includegraphics[width=1\columnwidth]{figures/watercycle}
-        \caption{Lorem ipsum}
+        \caption{\textit{WaterCycle} slide background (left) and foreground (right)}
     \end{subfigure}
     ~ 
     \begin{subfigure}[t]{0.48\columnwidth}
         \centering
         \includegraphics[width=1\columnwidth]{figures/quadformula}
-        \caption{Lorem ipsum}
+        \caption{\textit{Derivation} slide}
     \end{subfigure}  
     ~
     \begin{subfigure}[t]{0.48\columnwidth}
         \centering
         \includegraphics[width=1\columnwidth]{figures/tools}
-        \caption{Lorem ipsum}
+        \caption{\textit{BulletPoints} slide}
     \end{subfigure}  
     \caption{Evaluation slides}
+    \label{fig:studyslides}
 \end{figure}
 
-We evaluate \interface\ from the perspective of presenters and the audience.
+We evaluate \interface\ from the perspective of presenters and the audience. We assess the ease of use of the interface from the presenters' point of view, and rate the presentation quality from both the presenters' and the audiences' perspective.
 
 %\wil{If we have time, it could be useful to include even an informal
 %  evaluation of the space manipulation features. Maybe just give users
 %  a script that includes explicit ``improvisations'' beyond the
 %  prepared content and ask for qualitative feedback?}
 
-\val{Explain that we specifically focus on the delivery stage (vs. authoring).}
+%\val{Explain that we specifically focus on the delivery stage (vs. authoring).}
 To better understand the benefits of our interface, we compared \interface\ against two baselines. The first baseline (\textit{BaselinePPT}) represents conventional electronic slide tools.
 %
 We use Microsoft PowerPoint and allow presenters to apply animation effects (but no inking) during the presentation.
@@ -37,12 +38,13 @@ The second baseline (\textit{BaselineInk}) represents standard ``blackboard-styl
 %
 For this condition, we also use Microsoft PowerPoint but only allow users to pre-author and deliver content via inking.
 
-We hypothesized that different types of content would lend themselves to different presentation styles. We compare three different types of content: (1) a text-centered slide, explaining the derivation of the quadratic formula \textit{(Derivation)}, (2) a diagram-centered slide, describing the hydrologic cycle  \textit{(WaterDiagram)}, and (3) a typical PPT style slide with bullet points and images listing different carpentry tools \textit{(BulletPoints)}. Using PowerPoint, we pre-authored a single page slide for each of these content types. 
+We hypothesized that different types of content would lend themselves to different presentation styles. We compare three different types of content: (1) a text-centered slide, explaining the derivation of the quadratic formula \textit{(Derivation)}, (2) a diagram-centered slide, describing the hydrologic cycle  \textit{(WaterDiagram)}, and (3) a typical PPT style slide with bullet points and images listing different carpentry tools \textit{(BulletPoints)}. Using PowerPoint, we pre-authored a single page slide for each of these content types. (Figure~\ref{fig:studyslides}) 
 %
-To reduce the preparation effort for all three presentation tool conditions, we separated each slide into foreground and background elements, which are shown in our supplemental materials \wil{(are we doing that?)}. Moreover, for the \textit{BaselinPPT} condition, we further segmented the foreground into meaningful elements (e.g., arrows, labels, individual drawn objects) to make it easier for users to author fine-grained animations. 
+
+To reduce the preparation effort for all three presentation tool conditions, we separated each slide into foreground and background elements, which are shown in our supplemental materials. For the \textit{BaselinPPT} condition, we leave the individual PowerPoint elements (e.g., arrows, text boxes containing individual lines of equations, images) without further grouping them to make it easier for users to author fine-grained animations. 
 %
-\val{Figure of three slides, including explanation of background foreground}
-\wil{I edited above. Is this correct?}
+%\val{Figure of three slides, including explanation of background foreground}
+%\wil{I edited above. Is this correct?}
 
 \subsection{Study 1: Presenter Perspective}
 In our first study, we asked participants to present each of the three content types using the three different presentation tool conditions. 
@@ -50,11 +52,11 @@ In our first study, we asked participants to present each of the three content t
 For each content type, participants were given the pre-authored, pre-segmented slide. 
 They received verbal and written explanations of the material, and a printout of the complete slide contents (both foreground and background layers). They were given time to familiarize themselves with this material and to set up the slide before the presentation.
 %
-In the \textit{BaselinePPT} condition, participants could add animation effects to reveal or emphasize the foreground elements. For the \textit{BaselineInk} condition, the slide only contained background elements. Participants were free to write additional content into the slide as part their set up, which is analogous to blackboard lecturers writing on the board before class. For \interface, participants could also write additional content on top of the background, or they could choose to make some of the foreground elements visible (effectively moving those elements into the background layer).
+In the \textit{BaselinePPT} condition, participants could add animation effects to reveal or emphasize the foreground elements. For the \textit{BaselineInk} condition, the slide only contained background elements. Participants were free to write additional content into the slide as part of their set up, which is analogous to blackboard lecturers writing on the board before class. For \interface, participants could also write additional content on top of the background, or they could choose to make some of the foreground elements visible (effectively moving those elements into the background layer). \val{We only evaluated the ink to reveal and ink to annotate.}
 
-After the set up phase, participants used one of the three tool conditions to deliver the presentation.
+After the setup phase, participants used one of the three tool conditions to deliver the presentation. 
 %
-To simulate a real presentation with an audience, participants were asked to pretend that their presentation was being broadcast live as a webcast. At the end of each trial, we showed the user a screen recording of their presentation and asked them to self-rate their own presentation, this time pretending that they were students trying to learn the subject. Presenters also completed a questionnaire where they rated how easy it was to prepare and deliver presentations using each of the tools. All ratings were done on a \wil{X-point} Likert scale.
+To simulate a real presentation with an audience, participants were asked to pretend that their presentation was being broadcast live as a webcast. At the end of each trial, we showed the user a screen recording of their presentation and asked them to self-rate their own presentation, this time pretending that they were students trying to learn the subject. Presenters also completed a questionnaire where they rated how easy it was to prepare and deliver presentations using each of the tools. All ratings were done on a 5-point Likert scale.
 
 We used a within-subject design, where each participant delivered presentations on each interface. We kept the task order fixed and counter-balanced the order of the presentation tools to obtain an equal distribution of task-tool pairs.
 %
