@@ -9,16 +9,7 @@ From this analysis, we summarize the key findings that informed the design of ou
 
 \textbf{Presenters want flexibility over prepared contents rather than complete improvisation.} Even for informal settings, presenters have the bulk of the content planned and prepared beforehand, in the form of lecture notes, worksheets or slides. Thus, the type of flexibility that presenters want is the ability to make small-scale adjustments on-the-fly, such as omitting part of the content, adding minor changes such as a line of text or annotations, or changing the order of the contents. Inking is often used to this effect. 
 %\wil{This is repetitive with the last sentence in the previous paragraph.}
-
-\textbf{Pacing is important and context dependent.} 
-The choice of tool also affects the pace of the presentation. Electronic slides are useful for displaying information quickly, which may explain why presenters prefer them for time-constrained settings. Inking takes time, but it allows presenters to have fine-grained control over the pace of the presentation. Depending on the subject matter, the pace of real time writing also makes it easier to follow for the audience. For example, when describing sequential processes like solving a math problem or explaining a complex diagram, both presenters and viewers find it more effective to write them out step-by-step in real-time. Slide animations can simulate this effect, but setting up fine-grained animations is tedious. As a result, animated presentations typically include a very coarse set of discrete steps. 
-
-\textbf{Visual aesthetics matter but are difficult to achieve with inking.} Both as a presenter and as an audience, people frequently mentioned better visual aesthetics as an advantage of slides over inking. Presenters are often not satisfied with or even embarrassed by their own handwriting. They pointed out that it is even more difficult to write while talking at the same time. Even small operations, such as changing the pen color, seem burdensome during the lecture, as noted by Anderson\cite{anderson2004study}. 
-% \wil{Previous two sentences don't seem to be about aesthetics. Is there a separate observation to make about timing? Or could this go into the first observation on context-dependent flexibility?}
-%
-From a viewing perspective, people like the legibility and organization that pre-authored slides provide. As \cite{frey2002learners} also mention, sometimes audiences even felt that lecturers are better prepared when they present using electronic slides. 
-%\wil{For the two points with citations, are these things that also came up in your interviews, or are you just citing previous findings? If the former, we should try to make that clear, as I did with the Anderson reference above.}
-\begin{figure*}[t!]
+\begin{figure*}[ht!]
     \centering
     \begin{subfigure}[t]{0.32\textwidth}
         \centering
@@ -40,6 +31,16 @@ From a viewing perspective, people like the legibility and organization that pre
     \caption{Slide Layers in \interface. Slides are separated into foreground and background layers. \textbf{(a)} The background layer is always visible and it is what the audience sees initially. \textbf{(b)} The foreground layer is initially only visible on the presenter view, and is faded to distinguish it from the background. Presenters can reveal parts of it to the audience during delivery. The revealed parts appear on the audience view and becomes unfaded on the presenter view. \textbf{(c)} Optionally, presenters can also have the notes layer, which is only visible on the presenter view and acts as transparent speaker notes placed on top of the slides. }
     \label{fig:slidelayers}
 \end{figure*}
+
+\textbf{Pacing is important and context dependent.} 
+The choice of tool also affects the pace of the presentation. Electronic slides are useful for displaying information quickly, which may explain why presenters prefer them for time-constrained settings. Inking takes time, but it allows presenters to have fine-grained control over the pace of the presentation. Depending on the subject matter, the pace of real time writing also makes it easier to follow for the audience. For example, when describing sequential processes like solving a math problem or explaining a complex diagram, both presenters and viewers find it more effective to write them out step-by-step in real-time. Slide animations can simulate this effect, but setting up fine-grained animations is tedious. As a result, animated presentations typically include a very coarse set of discrete steps. 
+
+\textbf{Visual aesthetics matter but are difficult to achieve with inking.} Both as a presenter and as an audience, people frequently mentioned better visual aesthetics as an advantage of slides over inking. Presenters are often not satisfied with or even embarrassed by their own handwriting. They pointed out that it is even more difficult to write while talking at the same time. Even small operations, such as changing the pen color, seem burdensome during the lecture, as noted by Anderson\cite{anderson2004study}. 
+% \wil{Previous two sentences don't seem to be about aesthetics. Is there a separate observation to make about timing? Or could this go into the first observation on context-dependent flexibility?}
+%
+From a viewing perspective, people like the legibility and organization that pre-authored slides provide. As \cite{frey2002learners} also mention, sometimes audiences even felt that lecturers are better organized when they present using electronic slides. 
+%\wil{For the two points with citations, are these things that also came up in your interviews, or are you just citing previous findings? If the former, we should try to make that clear, as I did with the Anderson reference above.}
+
 \section{Design Goals}
 
 The above findings highlight the complementary attributes of electronic slides and inking. While slides are typically more organized and aesthetically pleasing, inking offers greater flexibility and fine-grained control at presentation time.
