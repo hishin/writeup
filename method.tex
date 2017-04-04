@@ -29,7 +29,7 @@ Unlike traditional electronic slides, presenters do not specify beforehand when,
 
 The key innovation of \interface\ is in how presenters deliver the pre-authored content.  The main mode of interaction at presentation time is inking, but instead of just adding strokes to the slide, inking supports three functions depending on the context: it can (1) reveal pre-authored slide elements to the audience, (2) add ink strokes on top of the slide, or (3) adjust the slide layout by creating blank space. Inking allows presenters to have flexibility and fine-grained control over when, how much, and how fast to reveal elements on the slide.
 %
-Moreover, when revealing pre-authored content, presenters do not have to worry about writing or drawing neatly.
+At the same time, the ability to reveal pre-authored content allows presenters to not worry about writing or drawing neatly.
 %
 Presenters can also add extra writing or annotations on top of pre-authored elements, and create blank space if necessary. 
 %
@@ -149,7 +149,7 @@ If the presenter inks quickly (e.g., scribbles), a larger neighborhood is reveal
 \subsubsection{Annotate}
 Presenters sometimes add new (i.e., unauthored) information to a slide on-the-fly during a presentation.
 %
-For example, a lecturer may circle an important concept for emphasis or explicitly label part of a diagram.
+For example, a lecturer may circle an important concept for emphasis or explicitly label part of a diagram. \val{They can add full line}
 %
 To make such annotations in /interface, the presenter simply inks over empty (or already revealed) pixels on the foreground layer. If less than \wil{X\%} of the pixels in the user stroke are within the $\alpha$ threshold of an unrevealed foreground pixel, the system treats the stroke as an annotation. To ensure that the annotation stands out from the surrounding slide content, \interface\ computes the average color of the slide around the stroke and sets the ink to a complementary color. \val{Figure of annotation over revealed element and annotation on empty background}. 
 
