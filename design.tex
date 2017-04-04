@@ -18,7 +18,28 @@ The choice of tool also affects the pace of the presentation. Electronic slides 
 %
 From a viewing perspective, people like the legibility and organization that pre-authored slides provide. As \cite{frey2002learners} also mention, sometimes audiences even felt that lecturers are better prepared when they present using electronic slides. 
 %\wil{For the two points with citations, are these things that also came up in your interviews, or are you just citing previous findings? If the former, we should try to make that clear, as I did with the Anderson reference above.}
-
+\begin{figure*}[t!]
+    \centering
+    \begin{subfigure}[t]{0.32\textwidth}
+        \centering
+        \includegraphics[width=1\columnwidth]{figures/videoslide1}
+        \caption{Background (Audience View)}
+    \end{subfigure}%
+    ~ 
+    \begin{subfigure}[t]{0.32\textwidth}
+        \centering
+        \includegraphics[width=1\columnwidth]{figures/videoslide2}
+        \caption{Background + Foreground (Presenter View)}
+    \end{subfigure}
+    ~
+        \begin{subfigure}[t]{0.32\textwidth}
+        \centering
+        \includegraphics[width=1\columnwidth]{figures/videoslide3}
+        \caption{Background + Foreground + Notes}
+    \end{subfigure}
+    \caption{Slide Layers in \interface. Slides are separated into foreground and background layers. \textbf{(a)} The background layer is always visible and it is what the audience sees initially. \textbf{(b)} The foreground layer is initially only visible on the presenter view, and is faded to distinguish it from the background. Presenters can reveal parts of it to the audience during delivery. The revealed parts appear on the audience view and becomes unfaded on the presenter view. \textbf{(c)} Optionally, presenters can also have the notes layer, which is only visible on the presenter view and acts as transparent speaker notes placed on top of the slides. }
+    \label{fig:slidelayers}
+\end{figure*}
 \section{Design Goals}
 
 The above findings highlight the complementary attributes of electronic slides and inking. While slides are typically more organized and aesthetically pleasing, inking offers greater flexibility and fine-grained control at presentation time.
